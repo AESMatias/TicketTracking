@@ -7,6 +7,7 @@ import { colors } from "@/components/generalColors";
 import { Image } from "react-native";
 import Login from "./views/home";
 import LoginEntry from "@/components/LoginEntry";
+import { PaperProvider } from 'react-native-paper';
 
 export default function Home() {
 
@@ -16,11 +17,15 @@ export default function Home() {
   return (
     <>
     {!isWeb ? (    
+      <PaperProvider>
      <ImageBackground source={backgroundImageLINK} 
      style={styles.backgroundImage}>
     <LoginEntry/>
     </ImageBackground>
-    ): (<LoginEntry/>)}
+    </PaperProvider>
+    ): (<PaperProvider>
+      <LoginEntry/>
+    </PaperProvider>)}
     </>
   );
 }

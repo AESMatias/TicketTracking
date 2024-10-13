@@ -10,6 +10,7 @@ import { Platform } from 'react-native'
 import { opacity } from 'react-native-reanimated/lib/typescript/reanimated2/Colors'
 import {GeneralHeader} from '@/components/HeaderGeneral';
 import handleLoginFunc from '@/components/HandleLogin';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 const LoginEntry = () => {
 
@@ -399,6 +400,12 @@ const backgroundImageLINK = require('../assets/images/Entrybackground.jpg') //TO
             zIndex: -10, // Ensure circle is behind button
             
           }]}/>
+
+          <Pressable onPress={animateAndNavigate}
+          >
+                      <Ionicons name="logo-google-playstore" size={24} color="black" />
+          </Pressable>
+
           <Pressable onPress={animateAndNavigate} style={
             {
               marginTop: 5,
